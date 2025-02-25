@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Collection System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body>
+
+    <header>
+        <h1>News Collection System</h1>
+        <input type="text" id="search" placeholder="Search news..." onkeyup="filterNews()">
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+    </header>
+
+    <div class="categories">
+        <button onclick="filterCategory('All')">All</button>
+        <button onclick="filterCategory('Technology')">Technology</button>
+        <button onclick="filterCategory('Sports')">Sports</button>
+        <button onclick="filterCategory('Politics')">Politics</button>
+    </div>
+
+    <div class="news-container" id="news-container">
+        <!-- News articles will be dynamically inserted here -->
+    </div>
+
+    <!-- Modal for news details -->
+    <div id="news-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-content"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 News Collection System | <a href="#">About</a> | <a href="#">Contact</a></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
